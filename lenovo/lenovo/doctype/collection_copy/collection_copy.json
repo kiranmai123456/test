@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CRC1-.##",
+ "creation": "2024-02-27 19:03:31.313541",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "leadfbo_id",
+  "business_name",
+  "contact_no",
+  "email_id",
+  "gst_no",
+  "uco",
+  "executive",
+  "column_break_s8p0",
+  "request_date",
+  "request_noof_cans",
+  "collection_date",
+  "collected_qty_in_kgs",
+  "rate",
+  "amount",
+  "payment_approver",
+  "is_collected"
+ ],
+ "fields": [
+  {
+   "fetch_from": ".fbo_code",
+   "fieldname": "leadfbo_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lead/FBO Id",
+   "options": "FBO",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "leadfbo_id.business_name",
+   "fieldname": "business_name",
+   "fieldtype": "Link",
+   "label": "Business Name",
+   "options": "FBO"
+  },
+  {
+   "fetch_from": "leadfbo_id.mobile_no",
+   "fieldname": "contact_no",
+   "fieldtype": "Link",
+   "label": "Contact No.",
+   "options": "FBO"
+  },
+  {
+   "fetch_from": "leadfbo_id.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Link",
+   "label": "Email id",
+   "options": "FBO"
+  },
+  {
+   "fetch_from": "leadfbo_id.supplier_primary_address",
+   "fieldname": "gst_no",
+   "fieldtype": "Link",
+   "label": "GST No.",
+   "options": "FBO"
+  },
+  {
+   "fieldname": "uco",
+   "fieldtype": "Data",
+   "label": "UCO"
+  },
+  {
+   "fetch_from": "user_master.",
+   "fieldname": "executive",
+   "fieldtype": "Data",
+   "label": "Executive"
+  },
+  {
+   "fieldname": "column_break_s8p0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "request_noof_cans",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Request No.of Cans",
+   "reqd": 1
+  },
+  {
+   "fieldname": "collection_date",
+   "fieldtype": "Autocomplete",
+   "label": "Collection Date"
+  },
+  {
+   "fieldname": "collected_qty_in_kgs",
+   "fieldtype": "Float",
+   "label": "Collected Qty in KGS"
+  },
+  {
+   "fetch_from": "leadfbo_id.pricekg",
+   "fieldname": "rate",
+   "fieldtype": "Link",
+   "label": "Rate",
+   "options": "FBO",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "payment_approver",
+   "fieldtype": "Autocomplete",
+   "label": "Payment Approver"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_collected",
+   "fieldtype": "Check",
+   "label": "Is Collected?"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-27 19:15:31.756280",
+ "modified_by": "Administrator",
+ "module": "lenovo",
+ "name": "Collection copy",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

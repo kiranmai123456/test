@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "VT1-.##",
+ "creation": "2024-02-27 19:05:39.896964",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hm2e",
+  "user_master",
+  "vehicle_master",
+  "collection_executive",
+  "vehicle",
+  "license_no",
+  "date",
+  "vehicle_out_reading",
+  "vehicle_out_reading_photo",
+  "vehicle_in_reading",
+  "vehicle_in_reading_photo",
+  "actual_kms"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hm2e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "user_master",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "User Master",
+   "options": "User"
+  },
+  {
+   "fieldname": "vehicle_master",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Vehicle Master",
+   "options": "Vehicle Master"
+  },
+  {
+   "fetch_from": "user_master.username",
+   "fieldname": "collection_executive",
+   "fieldtype": "Link",
+   "label": "Collection Executive",
+   "options": "User-Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vehicle_master.vehicle_no",
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "license_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "License No.",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_out_reading",
+   "fieldtype": "Float",
+   "label": "Vehicle Out Reading ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_out_reading_photo",
+   "fieldtype": "Attach Image",
+   "label": "Vehicle Out Reading Photo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_in_reading",
+   "fieldtype": "Float",
+   "label": "Vehicle In Reading",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_in_reading_photo",
+   "fieldtype": "Attach Image",
+   "label": "Vehicle In Reading Photo",
+   "reqd": 1
+  },
+  {
+   "default": "vehicle_out_reading - vehicle_in_reading",
+   "fieldname": "actual_kms",
+   "fieldtype": "Data",
+   "label": "Actual KMs",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-27 19:05:39.896964",
+ "modified_by": "Administrator",
+ "module": "lenovo",
+ "name": "vehicle tracking copy",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
