@@ -1,0 +1,29 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Test",
+   "width": "Full"
+  },
+  {
+   "chart": "Sales",
+   "width": "Full"
+  },
+  {
+   "chart": "Items",
+   "width": "Full"
+  }
+ ],
+ "creation": "2024-04-30 14:36:52.162185",
+ "dashboard_name": "Test",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2024-05-02 12:32:35.327906",
+ "modified_by": "Administrator",
+ "module": "lenovo",
+ "name": "Test",
+ "owner": "Administrator"
+}

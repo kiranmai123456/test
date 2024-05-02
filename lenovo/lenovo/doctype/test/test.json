@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TEST-.###",
+ "creation": "2024-03-05 14:58:57.104896",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_icym",
+  "image",
+  "name1",
+  "lname",
+  "full_name",
+  "gate_entry_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_icym",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "FName"
+  },
+  {
+   "fieldname": "lname",
+   "fieldtype": "Data",
+   "label": "LName"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "gate_entry_no",
+   "fieldtype": "Link",
+   "label": "Gate entry no.",
+   "options": "Gate Entry"
+  }
+ ],
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-30 13:05:19.813585",
+ "modified_by": "Administrator",
+ "module": "lenovo",
+ "name": "Test",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "tests",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
